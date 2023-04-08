@@ -1,0 +1,36 @@
+.nav {
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    width: 100%;
+    height: 55px;
+    z-index: 1;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in 0s;
+    background-color: #685cb0;
+}
+
+.nav__content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__content .home {
+    width: 80px;
+    position: fixed;
+    cursor: pointer;
+    top: 10px;
+    left: 20px;
+}
+
+.nav__content .github {
+    width: 80px;
+    position: fixed;
+    cursor: pointer;
+    top: 10px;
+    right: 20px;
+}
+
+.nav__black {
+    background-color: #5845c9;
+}
