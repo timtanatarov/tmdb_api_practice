@@ -7,7 +7,7 @@
     z-index: 1;
     box-sizing: border-box;
     transition: all 0.5s ease-in 0s;
-    background-color: #685cb0;
+    background-color: #c22929;
 }
 
 .nav__content {
@@ -32,5 +32,5 @@
 }
 
 .nav__black {
-    background-color: #5845c9;
+    background-color: #000000;
 }

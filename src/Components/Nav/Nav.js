@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import '../../css/nav.css';
+import '../../css/Nav.css';
 import {AiFillHome} from "react-icons/ai";
 import {GoMarkGithub} from "react-icons/go";
 
