@@ -1,11 +1,28 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import '../../css/banner.css';
+import axios from '../../axios/localAxios';
+import {userRequests} from '../../axios/Request';
 
 export const Banner = (props) => {
+    const [movie, setMovie] = useState([]);
+
+    useEffect(() => {
+        async function fetchData() {
+            const request = await axios.get(userRequests.fetchNetflixOriginals);
+            setMovie(request.data.results[Math.floor(Math.random() * request.data.results.length - 1)]);
+        }
+
+        fetchData();
+    }, [])
     return (
-        <div className='banner' style={{backgroundImage:`url('https://image.tmdb.org/t/p/original/3lwf8ps2MKa4ECBihjE91W6pjUd.jpg')`, backgroundPosition:'center', backgroundSize:'cover'}}>
+        <div className='banner' style={{
+            backgroundImage: `url('https://image.tmdb.org/t/p/original/${movie?.backdrop_path}')`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover'
+        }}>
             <div className='banner__content'>
                 <h1 className='banner__title'>
-                    Movie Name
+                    {movie?.title || movie?.original_name || movie?.name}
                 </h1>
                 <div className='banner__buttons'>
                     <button>Play</button>
@@ -13,14 +30,12 @@ export const Banner = (props) => {
                 </div>
                 <div className='banner__description'>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Ab accusantium dolorum et, eveniet explicabo nobis veniam veritatis!
-                        A aspernatur at consequatur, corporis cum, debitis dolor eos ex facilis
-                        itaque minus nam nostrum officia perferendis qui reiciendis, sapiente
-                        temporibus. Assumenda beatae culpa doloribus ducimus fugit modi nostrum
-                        nulla numquam perferendis ratione.
+                        {movie?.overview}
                     </p>
                 </div>
+            </div>
+            <div className="banner__fade">
+
             </div>
         </div>
     );

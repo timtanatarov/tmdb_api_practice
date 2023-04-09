@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e4bda8f-1966-4258-b0da-4208507e032d" name="Changes" comment="" />
+    <list default="true" id="8e4bda8f-1966-4258-b0da-4208507e032d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Row/Row.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/axios/Request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/axios/localAxios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/banner.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/css/row.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Banner/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Banner/Banner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Homepage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -35,12 +47,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/timtanatarov/Desktop/aston/ReactJS/tmdb_api_practice/src/css",
+    "last_opened_file_path": "C:/Users/user/Desktop/Work/Aston/ReactJS/tmdb_api_practice",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -62,6 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1680971850881</updated>
       <workItem from="1680971852521" duration="5876000" />
+      <workItem from="1680975552143" duration="21000" />
+      <workItem from="1680975575770" duration="11230000" />
     </task>
     <servers />
   </component>
