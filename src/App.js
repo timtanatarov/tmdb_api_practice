@@ -1,13 +1,33 @@
-import React from 'react';
-// import './App.css';
+import React, {useEffect} from 'react';
 import {Homepage} from "./Components/Homepage/Homepage";
+import Login from './Components/Login/Login';
+import {useDispatch, useSelector} from 'react-redux';
+import {login, logout, selectUser} from './features/userSlice';
+import {auth} from './firebase/firebase';
 
 function App() {
-    const user = true;
+    const user = useSelector(selectUser);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            if (user) {
+                dispatch(login({
+                    uid: user.uid,
+                    email: user.email,
+
+                }))
+            } else {
+                dispatch(logout);
+            }
+        })
+
+        return unsubscribe;
+    }, []);
+
     return (
         <div className="App">
             {
-                !user ? (<div>Log in pls</div>) : (<Homepage/>)
+                !user ? (<Login/>) : (<Homepage/>)
             }
         </div>
     );
