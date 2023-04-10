@@ -1,15 +1,7 @@
-import {MOVIES} from '../actions/index';
+import movies from './movies_reducer';
+import {combineReducers} from 'redux';
+const rootReducer = combineReducers({
+    movies
+})
 
-const movies = (state = [], action) => {
-    switch(action.type){
-        case MOVIES: {
-            console.log('movies are: ', action.items);
-            return action.items;
-        }
-        default: {
-            return state;
-        }
-    }
-}
-
-export default movies;
+export default rootReducer;

@@ -4,7 +4,7 @@ import MovieResults from '../MovieResults/MovieResults';
 export const MainPage = (props) => {
     return (
         <div className='container'>
-            <div className='text-center'>
+            <div className='row text-center'>
                 <div className='jumbotron'>
                     <h1>TMDB API Practice</h1>
                     <p>Search any movies what you want</p>

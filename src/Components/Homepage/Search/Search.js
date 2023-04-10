@@ -8,7 +8,6 @@ import {connect} from 'react-redux';
 const Search = (props) => {
     const [query, setQuery] = useState('');
     const search = () => {
-        console.log('Movie:', query);
         let url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&page=1&include_adult=false&query=${query}\`;`;
         fetch(url, {
             method: 'GET',
@@ -17,7 +16,7 @@ const Search = (props) => {
     }
     return (
         <div>
-            <Form inline>
+            <Form inline='true'>
                 <FormGroup className='FormGroup'>
                     <div>
                         <FormControl text='text' placeholder='Search' onChange={e => setQuery(e.target.value)}>
@@ -25,7 +24,7 @@ const Search = (props) => {
                         </FormControl>
                     </div>
                     <div>
-                        <Button bsStyle='success' onClick={search}>Sub</Button>
+                        <Button bsstyle='success' onClick={search}>Sub</Button>
                     </div>
                 </FormGroup>
             </Form>
