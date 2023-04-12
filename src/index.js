@@ -8,8 +8,6 @@ import './index.css';
 const container = document.getElementById('root');
 const root = createRoot(container);
 
-console.log(store.getState());
-
 root.render(
     <Provider store={store}>
       <App />

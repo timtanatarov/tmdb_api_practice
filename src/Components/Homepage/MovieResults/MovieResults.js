@@ -4,20 +4,24 @@ import {connect} from 'react-redux';
 import MovieItem from '../MovieItem/MovieItem';
 
 const MovieResults = (props) => {
-    console.log(props.movies.movies);
+    const movies = props.movies.movies;
+    const {modalActive, setModalActive, selectMovie, setSelectMovie, isResultsVisible, handleShowResults} = props;
     return (
-        <div>
-            <h1>Results will be here:</h1>
-            <Search/>
-            {props.movies.movies.map(item => {
-                return <MovieItem movie={item} key={item.id}/>;
-            })}
+        <div className='container__search__results'>
+            <Search handleShowResults={handleShowResults}/>
+            {isResultsVisible && (<div className='search__movie__result'>
+                {movies.map(item => {
+                    return <MovieItem movie={item} key={item.id} modalActive={modalActive}
+                                      setModalActive={setModalActive} selectMovie={selectMovie}
+                                      setSelectMovie={setSelectMovie}/>;
+                })}
+            </div>)}
+
         </div>
     );
 }
 
 const mapStateToProps = state => {
-    console.log(state);
     return {
         movies: state.movies,
     };

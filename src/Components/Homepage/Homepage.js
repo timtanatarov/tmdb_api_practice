@@ -3,22 +3,50 @@ import Nav from '../Nav/Nav';
 import Banner from '../Banner/Banner';
 import Row from '../Row/Row';
 import {userRequests} from '../../axios/Request';
-import {MainPage} from './MainPage/MainPage';
+import {useState} from 'react';
+import {PopularMovies} from '../PopularMovies/PopularMovies';
 
 export const Homepage = () => {
+    const [modalActive, setModalActive] = useState(false);
+    const [selectMovie, setSelectMovie] = useState(null);
+    const [isResultsVisible, setIsResultsVisible] = useState(false);
+
+    function handleShowResults() {
+        setIsResultsVisible(true);
+    }
+
+    function handleHideResults() {
+        setIsResultsVisible(false);
+    }
+
     return (
         <div className='home-screen'>
-            <Nav/>
-            {/*<Banner />*/}
-            {/*<Row title='Netflix Originals' isLargeRow fetchURL={userRequests.fetchNetflixOriginals}/>*/}
-            {/*<Row title='Trending Now' fetchURL={userRequests.fetchTrending}/>*/}
-            {/*<Row title='Top Rated' fetchURL={userRequests.fetchTopRated}/>*/}
-            {/*<Row title='Action movies' fetchURL={userRequests.fetchActionMovies}/>*/}
-            {/*<Row title='Comedy Movies' fetchURL={userRequests.fetchComedyMovies}/>*/}
-            {/*<Row title='Horror Movies' fetchURL={userRequests.fetchHorrorMovies}/>*/}
-            {/*<Row title='Romantic Movies' fetchURL={userRequests.fetchRomanceMovies}/>*/}
-            {/*<Row title='Documentaries' fetchURL={userRequests.fetchDocumentaries}/>*/}
-            <MainPage />
+            <Nav modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} isResultsVisible={isResultsVisible} handleShowResults={handleShowResults} />
+            <Banner handleHideResults={handleHideResults}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Netflix Originals' isLargeRow
+                 fetchURL={userRequests.fetchNetflixOriginals}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Trending Now' isLargeRow fetchURL={userRequests.fetchTrending}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Top Rated' isLargeRow fetchURL={userRequests.fetchTopRated}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Action movies' isLargeRow
+                 fetchURL={userRequests.fetchActionMovies}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Comedy Movies' isLargeRow
+                 fetchURL={userRequests.fetchComedyMovies}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Horror Movies' isLargeRow
+                 fetchURL={userRequests.fetchHorrorMovies}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Romantic Movies' isLargeRow
+                 fetchURL={userRequests.fetchRomanceMovies}/>
+            <Row modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                 setSelectMovie={setSelectMovie} title='Documentaries' isLargeRow
+                 fetchURL={userRequests.fetchDocumentaries}/>
+            {/*<PopularMovies />*/}
         </div>
     )
 }

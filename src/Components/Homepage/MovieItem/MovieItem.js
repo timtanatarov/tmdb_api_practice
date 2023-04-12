@@ -1,26 +1,53 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {Modal} from 'react-bootstrap';
 
-function MovieItem(props) {
-    const movie = props.movie;
-    const urlComponent = 'https://image.tmdb.org/t/p/w342' + movie.poster_path;
-    const altComponent = movie.title + 'Image';
-    const [subs, setSubs] = useState(movie.overview.slice(0, 104) + '...');
+function MovieItem({movie, modalActive, setModalActive, selectMovie, setSelectMovie}) {
+    const base_base_url = '';
+
+    const handleOpen = (currentMovie) => {
+        setModalActive(true);
+        setSelectMovie(currentMovie);
+    };
+
+    console.log(movie.id)
+
     return (
-        <div>
-            <div className='col-sm-12 col-sm-3'>
-                <div className='thumbnail'>
-                    <img src={urlComponent} alt={altComponent}/>
-                    <div className='caption'>
-                        <h4>{movie.title}</h4>
-                        <p>{subs}</p>
-                        <p>Release Date – {movie.release_date}</p>
-                        <p>Ratings – {movie.vote_average}</p>
-                        {/*<p><a href='#' className='btn btn-primary' role='button'>Button</a> <a href='#'*/}
-                        {/*                                                                       className='btn btn-default'*/}
-                        {/*                                                                       role='button'>Button</a>*/}
-                        {/*</p>*/}
+        <div className='search__movie__item__container' onClick={() => {
+            setSelectMovie(movie);
+            handleOpen(movie);
+        }}>
+            <Modal active={modalActive} setActive={setModalActive}
+                   key={movie.id + movie.title}>
+                {movie ? (<div className='modal__container'>
+                    <img className='modal__poster'
+                         src={`${movie.backdrop_path} `}/>
+                    <div className='modal__title__container'>
+                        Title:
+                        <div className='modal__title'>
+                            {movie.name || movie.title}
+                        </div>
                     </div>
-                </div>
+                    <div className='modal__overview__container'>Overview:
+                        <div className='modal__overview'>
+                            {movie.overview}
+                        </div>
+                    </div>
+                    <div className='modal__release__container'>
+                        Release date:
+                        <div className='modal__release'>
+                            {movie.release_date || movie.first_air_date}
+                        </div>
+                    </div>
+                    <div className='modal__rate__container'>
+                        Rating:
+                        <div className='modal__rate'>
+                            {movie.vote_average}
+                        </div>
+                    </div>
+                </div>) : null}
+            </Modal>
+            <div className='search__movie__item'>
+                {movie.title}
             </div>
         </div>
     );

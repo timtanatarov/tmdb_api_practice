@@ -12,7 +12,8 @@
 
 .nav__content {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav__content .home {
@@ -29,6 +30,14 @@
     cursor: pointer;
     top: 10px;
     right: 20px;
+}
+
+.nav__content .search {
+    width: 80px;
+    position: fixed;
+    cursor: pointer;
+    right: calc(50vw + 150px);
+    top: 10px;
 }
 
 .nav__black {

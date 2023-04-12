@@ -14,14 +14,49 @@
     display: none;
 }
 
+.modal__container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__poster {
+    height: 265px;
+    border-radius: 5px;
+}
+
+.modal__title__container, .modal__overview__container, .modal__release__container, .modal__rate__container {
+    padding-top: 20px;
+    font-size: 20px;
+    color: #858585;
+}
+
+.modal__title, .modal__overview, .modal__release, .modal__rate {
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+}
+.modal__title {
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+}
+
+.modal__overview, .modal__release, .modal__rate {
+    font-weight: normal;
+    font-size: 20px;
+    color: white;
+}
 .rowposter {
-    max-height: 100px;
+    max-height: 120px;
+    height: 80%;
     object-fit: contain;
     margin-left: 10px;
-    width: 100%;
+    width: 80%;
     cursor: pointer;
-    transition: transform 450ms ;
+    transition: transform 450ms;
 }
+
 .rowposter:hover {
     transform: scale(1.08)
 }

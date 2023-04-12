@@ -1,3 +1,52 @@
 .FormGroup {
     display: flex;
 }
+
+.search__movie__result {
+    border-radius: 5px;
+    padding: 10px 20px 20px 20px;
+    left: -100px;
+    width: 267px;
+    color: white;
+    background-color: #1a1a1a;
+}
+
+.search__movie__item__container {
+    margin: 7px;
+    padding: 1px;
+    background-color: #858585;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.search__movie__item__container:hover {
+    background-color: #d4d4d4;
+    color: #d05d5d;
+}
+
+.search__movie__item {
+    font-size: 15px;
+}
+
+
+.search__input {
+    border-radius: 5px 0 0 5px;
+    height: 30px;
+    width: 300px;
+    border: 0;
+    text-align: center;
+}
+
+.search__button {
+    border-radius: 0 5px 5px 0;
+    height: 33px;
+    width: 50px;
+    border: 0;
+    text-align: center;
+    background-color: #414141;
+    color: white;
+}
+
+.search__button:hover {
+    background-color: #1a1a1a;
+}

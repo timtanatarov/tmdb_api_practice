@@ -1,9 +1,17 @@
 import React, {useEffect, useState} from 'react';
 import '../../css/Nav.css';
-import {AiFillHome} from "react-icons/ai";
-import {GoMarkGithub} from "react-icons/go";
+import {AiFillHome} from 'react-icons/ai';
+import {GoMarkGithub} from 'react-icons/go';
+import {MainPage} from '../Homepage/MainPage/MainPage';
 
-export const Nav = (props) => {
+export const Nav = ({
+                        modalActive,
+                        setModalActive,
+                        selectMovie,
+                        setSelectMovie,
+                        isResultsVisible,
+                        handleShowResults
+                    }) => {
     const [show, handleShow] = useState(false);
 
     const transitionNavbar = () => {
@@ -25,7 +33,12 @@ export const Nav = (props) => {
             <div className='test__div'></div>
             <div className='nav__content'>
                 <AiFillHome size='30px' color='white' className='home'/>
-                <GoMarkGithub size='30px' color='white'  className='github'/>
+                <div className='search'>
+                    <MainPage modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                              setSelectMovie={setSelectMovie} isResultsVisible={isResultsVisible}
+                              handleShowResults={handleShowResults}/>
+                </div>
+                <GoMarkGithub size='30px' color='white' className='github'/>
             </div>
         </div>
     );

@@ -9,4 +9,5 @@ export const userRequests = {
     fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
     fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
     fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+    // fetchBestMovies: `/movie/top_rated?api_key=0fc95f34faa64c1829cf4ac07d11aeca&language=en-US`,
 };

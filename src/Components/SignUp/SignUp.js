@@ -10,9 +10,7 @@ export const SignUp = (props) => {
         auth.createUserWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
-        ).then(authUser => {
-            console.log(authUser)
-        }).catch(error => alert(error.message))
+        ).catch(error => alert(error.message))
     }
 
     const signIn = e => {
@@ -20,7 +18,7 @@ export const SignUp = (props) => {
         auth.signInWithEmailAndPassword(
             emailRef.current.value,
             passwordRef.current.value
-        ).then(authUser => console.log(authUser)).catch(error => alert(error.message))
+        ).catch(error => alert(error.message))
     }
 
     return (<div className='signUpScreen'>

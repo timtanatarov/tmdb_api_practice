@@ -1,16 +1,19 @@
 import React from 'react';
 import MovieResults from '../MovieResults/MovieResults';
 
-export const MainPage = (props) => {
+export const MainPage = ({
+                             modalActive,
+                             setModalActive,
+                             selectMovie,
+                             setSelectMovie,
+                             isResultsVisible,
+                             handleShowResults
+                         }) => {
     return (
-        <div className='container'>
-            <div className='row text-center'>
-                <div className='jumbotron'>
-                    <h1>TMDB API Practice</h1>
-                    <p>Search any movies what you want</p>
-                </div>
-            </div>
-            <div className='row'><MovieResults/></div>
-        </div>
+        <>
+            <MovieResults modalActive={modalActive} setModalActive={setModalActive} selectMovie={selectMovie}
+                          setSelectMovie={setSelectMovie} isResultsVisible={isResultsVisible}
+                          handleShowResults={handleShowResults}/>
+        </>
     );
 };
