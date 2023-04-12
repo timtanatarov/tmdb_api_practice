@@ -38,7 +38,7 @@ export const Nav = ({
                               setSelectMovie={setSelectMovie} isResultsVisible={isResultsVisible}
                               handleShowResults={handleShowResults}/>
                 </div>
-                <GoMarkGithub size='30px' color='white' className='github'/>
+                <GoMarkGithub size='30px' color='white' className='github' onClick='https://github.com/timtanatarov/tmdb_api_practice'/>
             </div>
         </div>
     );

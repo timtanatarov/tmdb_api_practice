@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e4bda8f-1966-4258-b0da-4208507e032d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Modal/Modal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PopularMovies/PopularMovies.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/PopularMovies/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/css/Modal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Banner/Banner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Banner/Banner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Homepage/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Homepage/MainPage/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Homepage/MainPage/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Homepage/MovieItem/MovieItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Homepage/MovieItem/MovieItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Homepage/MovieResults/MovieResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Homepage/MovieResults/MovieResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Homepage/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Homepage/Search/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Nav/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Nav/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Row/Row.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Row/Row.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/SignUp/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/axios/Request.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/axios/Request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Nav.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Nav.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Row.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Row.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/Search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/Search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="8e4bda8f-1966-4258-b0da-4208507e032d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -93,6 +70,7 @@
       <workItem from="1681200816844" duration="4291000" />
       <workItem from="1681205189021" duration="17388000" />
       <workItem from="1681223672215" duration="1431000" />
+      <workItem from="1681293424653" duration="41000" />
     </task>
     <servers />
   </component>
